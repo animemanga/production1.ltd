@@ -10,6 +10,6 @@
         <TextBox Name="PassWord" HorizontalAlignment="Left" Height="23" Margin="30,100,0,0" TextWrapping="Wrap" Text="PassWord" VerticalAlignment="Top" Width="250"/>
         <Button Name="Cancel" Content="Cancel" HorizontalAlignment="Left" Margin="30,250,0,0" VerticalAlignment="Top" Width="130" Height="50"/>
         <Button Name="Login" Content="Login" HorizontalAlignment="Left" Margin="210,250,0,0" VerticalAlignment="Top" Width="130" Height="50"/>
-        <Image Margin="426,148,10.4,10" Source="Produktion Logo.PNG" Stretch="Fill"/>
+        <Image Margin="426,158,10,0" Source="Produktion Logo.PNG" Stretch="Fill"/>
     </Grid>
 </Window>
