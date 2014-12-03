@@ -13,18 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ProductionLtd
+namespace Projekt_Produktion__GUI_ex_
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
-        Controller _controller;
         public MainWindow()
         {
             InitializeComponent();
-            _controller = new Controller();
         }
     }
 }
