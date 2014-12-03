@@ -1,8 +1,16 @@
-﻿<Window x:Class="ProductionLtd.MainWindow"
+﻿<Window x:Class="Projekt_Produktion__GUI_ex_.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="450" Width="725">
     <Grid>
-        
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="300" Margin="10,10,0,0" VerticalAlignment="Top" Width="350">
+            <Label Content="Login" Margin="140,10,140,255" FontFamily="Times New Roman" FontSize="20"/>
+        </Border>
+        <TextBox Name="UserName" HorizontalAlignment="Left" Height="23" Margin="30,70,0,0" TextWrapping="Wrap" Text="UserName" VerticalAlignment="Top" Width="250"/>
+        <TextBox Name="PassWord" HorizontalAlignment="Left" Height="23" Margin="30,100,0,0" TextWrapping="Wrap" Text="PassWord" VerticalAlignment="Top" Width="250"/>
+        <Button Name="Cancel" Content="Cancel" HorizontalAlignment="Left" Margin="30,250,0,0" VerticalAlignment="Top" Width="130" Height="50"/>
+        <Button Name="Login" Content="Login" HorizontalAlignment="Left" Margin="210,250,0,0" VerticalAlignment="Top" Width="130" Height="50" Click="Login_Click"/>
+        <Image Margin="508,210,10.4,10" Source="Produktion Logo.PNG" Stretch="Fill" Width="200" Height="200"/>
+        <Image Margin="426,148,10.4,10" Source="Produktion Logo.PNG" Stretch="Fill"/>
     </Grid>
 </Window>
