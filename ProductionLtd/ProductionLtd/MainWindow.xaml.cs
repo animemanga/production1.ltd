@@ -23,6 +23,8 @@ namespace Projekt_Produktion__GUI_ex_
         public MainWindow()
         {
             InitializeComponent();
+            int hej = 0;
+
         }
     }
 }
