@@ -53,7 +53,21 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Admin Site.xaml.cs">
+      <DependentUpon>Admin Site.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BuisnessSite.xaml.cs">
+      <DependentUpon>BuisnessSite.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Workplan.cs" />
+    <Page Include="Admin Site.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BuisnessSite.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
