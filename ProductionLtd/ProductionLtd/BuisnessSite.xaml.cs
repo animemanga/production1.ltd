@@ -21,7 +21,7 @@ namespace ProductionLtd
     {
         public BuisnessSite()
         {
-            InitializeComponent();
+            
         }
     }
 }
