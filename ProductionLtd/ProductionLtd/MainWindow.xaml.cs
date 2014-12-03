@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProductionLtd;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,8 +24,13 @@ namespace Projekt_Produktion__GUI_ex_
         public MainWindow()
         {
             InitializeComponent();
-            int hej = 0;
+        }
 
+        private void Login_Click(object sender, RoutedEventArgs e)
+        {
+            Admin_Site AS = new Admin_Site(); 
+            AS.Show();
+            this.Close();
         }
     }
 }

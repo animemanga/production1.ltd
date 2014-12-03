@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Sælger;
 
 namespace ProductionLtd
 {
@@ -22,6 +23,13 @@ namespace ProductionLtd
         public Admin_Site()
         {
             InitializeComponent();
+        }
+
+        private void LogOff_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow MW = new MainWindow();
+            MW.Show();
+            this.Close();
         }
     }
 }
