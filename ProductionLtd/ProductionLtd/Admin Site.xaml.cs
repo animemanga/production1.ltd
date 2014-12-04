@@ -25,10 +25,8 @@ namespace ProductionLtd
             InitializeComponent();
         }
 
-        private void LogOff_Click(object sender, RoutedEventArgs e)
+        private void LogOut_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow MW = new MainWindow();
-            MW.Show();
             this.Close();
         }
     }

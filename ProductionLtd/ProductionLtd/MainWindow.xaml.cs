@@ -31,8 +31,14 @@ namespace Projekt_Produktion__GUI_ex_
         private void Login_Click(object sender, RoutedEventArgs e)
         {
             Admin_Site AS = new Admin_Site();
-            AS.Show();
-            this.Close();
+            this.Visibility = Visibility.Collapsed;
+            AS.ShowDialog();
+            this.Visibility = Visibility.Visible;
+        }
+
+        private void Cancel_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
         }
     }
 }

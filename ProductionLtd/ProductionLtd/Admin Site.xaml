@@ -26,7 +26,7 @@
         <Image HorizontalAlignment="Left" Height="23" Margin="249,-33,0,0" VerticalAlignment="Top" Width="43"/>
         <Image Margin="215,-32,10,271" Source="Udklip.PNGlillelogo.PNG" Stretch="Fill"/>
         <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="1" Stroke="Black" VerticalAlignment="Top" Width="157" Margin="58,233,0,0"/>
-        <Button Name ="LogOff" Content="LogOff" HorizontalAlignment="Left" Margin="25,241,0,0" VerticalAlignment="Top" Width="214" Click="LogOff_Click"/>
+        <Button Name ="LogOut" Content="LogOut" HorizontalAlignment="Left" Margin="25,241,0,0" VerticalAlignment="Top" Width="214" Click="LogOut_Click"/>
 
     </Grid>
 </Window>
