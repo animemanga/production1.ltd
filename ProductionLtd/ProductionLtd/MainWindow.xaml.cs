@@ -21,16 +21,20 @@ namespace Projekt_Produktion__GUI_ex_
     /// </summary>
     public partial class MainWindow : Window
     {
+        Controller _controller;
         public MainWindow()
         {
             InitializeComponent();
+            _controller = new Controller();
         }
 
         private void Login_Click(object sender, RoutedEventArgs e)
         {
-            Admin_Site AS = new Admin_Site(); 
-            AS.Show();
-            this.Close();
+            _controller.login();
+        }
+        public void close()
+        {
+            this.close();
         }
     }
 }
