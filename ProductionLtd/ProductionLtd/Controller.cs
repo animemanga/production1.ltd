@@ -71,15 +71,5 @@ namespace ProductionLtd
 
             }
         }
-
-        // kormakurs del 
-        public void login()
-        {
-            Admin_Site AS = new Admin_Site();
-            AS.Show();
-            
-        }
-
-
     }
 }

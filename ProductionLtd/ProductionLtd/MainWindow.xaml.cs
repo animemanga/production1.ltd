@@ -30,11 +30,9 @@ namespace Projekt_Produktion__GUI_ex_
 
         private void Login_Click(object sender, RoutedEventArgs e)
         {
-            _controller.login();
-        }
-        public void close()
-        {
-            this.close();
+            Admin_Site AS = new Admin_Site();
+            AS.Show();
+            this.Close();
         }
     }
 }
