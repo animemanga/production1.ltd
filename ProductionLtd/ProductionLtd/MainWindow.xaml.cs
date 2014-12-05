@@ -26,19 +26,11 @@ namespace Projekt_Produktion__GUI_ex_
         {
             InitializeComponent();
             _controller = new Controller();
-        }
 
-        private void Login_Click(object sender, RoutedEventArgs e)
-        {
-            Admin_Site AS = new Admin_Site();
-            this.Visibility = Visibility.Collapsed;
-            AS.ShowDialog();
-            this.Visibility = Visibility.Visible;
-        }
+            this.Visibility = Visibility.Hidden;
 
-        private void Cancel_Click(object sender, RoutedEventArgs e)
-        {
-            Application.Current.Shutdown();
+            LoginScreen LS = new LoginScreen();
+            LS.Show();
         }
     }
 }

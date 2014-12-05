@@ -11,7 +11,6 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using Sælger;
 
 namespace ProductionLtd
 {
@@ -27,7 +26,9 @@ namespace ProductionLtd
 
         private void LogOut_Click(object sender, RoutedEventArgs e)
         {
+            LoginScreen LS = new LoginScreen();
             this.Close();
+            LS.Visibility = Visibility.Visible;
         }
     }
 }
