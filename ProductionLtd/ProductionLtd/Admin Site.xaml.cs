@@ -37,27 +37,27 @@ namespace ProductionLtd
         {
             //Change site by writing the name of the site you want to go to,- 
             //and then tell the program that you want to switch, by writting Showdialog.
-            //WorkingPlan WP = new WorkingPlan();
-            //WP.ShowDialog();
+            Workingplan Wp = new Workingplan();
+            Wp.ShowDialog();
         }
 
         private void ChangeOrder_Click(object sender, RoutedEventArgs e)
         {
-            //this.Visibility = Visibility.Hidden;
-            //ChangeOrder AC = new ChangeOrder();
-            //AC.ShowDialog();
+            this.Visibility = Visibility.Hidden;
+            ChangeOrder AC = new ChangeOrder();
+            AC.ShowDialog();
         }
 
         private void MakeOrder_Click(object sender, RoutedEventArgs e)
         {
-            //ChangeOrder AC = new ChangeOrder();
-            //AC.ShowDialog();
+            ChangeOrder AC = new ChangeOrder();
+            AC.ShowDialog();
         }
 
         private void RemoveEmployee_Click(object sender, RoutedEventArgs e)
         {
-            //EmployeeChange AC = new EmployeeChange();
-            //AC.ShowDialog();
+            EmployeeChange AC = new EmployeeChange();
+            AC.ShowDialog();
         }
 
         private void AddEmployee_Click(object sender, RoutedEventArgs e)

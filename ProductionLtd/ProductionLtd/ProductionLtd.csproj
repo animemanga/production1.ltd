@@ -59,6 +59,9 @@
     <Compile Include="BuisnessSite.xaml.cs">
       <DependentUpon>BuisnessSite.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ChangeOrder.xaml.cs">
+      <DependentUpon>ChangeOrder.xaml</DependentUpon>
+    </Compile>
     <Compile Include="EmployeeChange.xaml.cs">
       <DependentUpon>EmployeeChange.xaml</DependentUpon>
     </Compile>
@@ -74,6 +77,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="BuisnessSite.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChangeOrder.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
