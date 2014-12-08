@@ -11,19 +11,17 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using System.Data;
-using System.Data.SqlClient;
 
 namespace ProductionLtd
 {
     /// <summary>
-    /// Interaction logic for WorkingPlan.xaml
+    /// Interaction logic for Workingplan.xaml
     /// </summary>
-    public partial class WorkingPlan : Window
+    public partial class Workingplan : Window
     {
-        public WorkingPlan()
+        public Workingplan()
         {
-            InitializeComponent();
+            InitializeComponent();            
         }
     }
 }

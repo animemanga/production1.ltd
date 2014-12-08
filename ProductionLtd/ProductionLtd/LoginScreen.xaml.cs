@@ -55,13 +55,13 @@ namespace ProductionLtd
                         if ((UserName.Text == "Employee") && (PassWord.Text == "1234Employee"))
                         {
                             this.Visibility = Visibility.Hidden;
-                            WorkingPlan WP = new WorkingPlan();
+                            Workingplan WP = new Workingplan();
                             WP.ShowDialog();
                         }
 
                     else
                     {
-                        MessageBox.Show("DAMN!");
+                        MessageBox.Show("DAMN, you messed up!");
                     }
         }
         private void Login_Click(object sender, RoutedEventArgs e)

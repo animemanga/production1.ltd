@@ -1,4 +1,4 @@
-﻿<Window x:Class="Arbejdsplans_vindue.MainWindow"
+﻿<Window x:Class="ProductionLtd.Workingplan"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="450" Width="725">
@@ -14,7 +14,7 @@
         <TextBox Name="Customer" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="Costomer" VerticalAlignment="Top" Width="175" Margin="360,34,0,0"/>
         <TextBox Name="TimeDate" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="Time and Date for Finish" VerticalAlignment="Top" Width="171" Margin="535,34,0,0"/>
         <TextBox Name="OrderBox" HorizontalAlignment="Left" Height="352" Margin="10,57,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="175"/>
-        <TextBox Name="MachineBox" HorizontalAlignment="Left" Height="352" Margin="185,57,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="175" TextChanged="OrderBox_TextChanged"/>
+        <TextBox Name="MachineBox" HorizontalAlignment="Left" Height="352" Margin="185,57,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="175"/>
         <TextBox Name="CompanyBox" HorizontalAlignment="Left" Height="352" Margin="360,57,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="175"/>
         <TextBox Name="TimeBox" HorizontalAlignment="Left" Height="352" Margin="535,57,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="171"/>
         <TextBox Name="EmployeeName" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>

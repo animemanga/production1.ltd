@@ -27,22 +27,12 @@ namespace ProductionLtd
             "Password=Baz1nga9;");
             try
             {
-                conn.Open();
-
-                SqlCommand cmd = new SqlCommand("GetAddressFromPostalCode", conn);
-                cmd.CommandType = CommandType.StoredProcedure;
-
-                SqlDataReader rdr = cmd.ExecuteReader();
-
-                while (rdr.HasRows && rdr.Read())
-                {
-                    Console.WriteLine(rdr["AddressID"] + " " + rdr["AddressLine1"] + rdr["City"] + " " + rdr["PostalCode"]);
-                }
 
             }
-            catch (SqlException e)
+            catch (Exception k)
             {
-                Console.WriteLine("UPS" + e.Message);
+                string kk = k.ToString();
+                System.Windows.MessageBox.Show(kk);
             }
             finally
             {

@@ -62,8 +62,8 @@ namespace ProductionLtd
 
         private void AddEmployee_Click(object sender, RoutedEventArgs e)
         {
-            //EmployeeChange AC = new EmployeeChange();
-            //AC.ShowDialog();
+            EmployeeChange AC = new EmployeeChange();
+            AC.ShowDialog();
         }
     }
 }

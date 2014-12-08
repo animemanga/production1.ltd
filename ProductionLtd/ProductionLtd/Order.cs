@@ -11,7 +11,7 @@ namespace ProductionLtd
 {
     class Order
     {
-        Process _processlist;
+        
         public DateTime deadLine { get; set; }
         public string name { get; set; }
 
