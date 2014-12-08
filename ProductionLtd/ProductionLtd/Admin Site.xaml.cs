@@ -29,7 +29,9 @@ namespace ProductionLtd
 
         private void LogOut_Click(object sender, RoutedEventArgs e)
         {
+            LoginScreen LS = new LoginScreen();
             this.Close();
+            LS.Visibility = Visibility.Visible;
         }
 
 
