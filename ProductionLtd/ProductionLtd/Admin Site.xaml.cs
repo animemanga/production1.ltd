@@ -11,8 +11,6 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using System.Data;
-using System.Data.SqlClient;
 
 namespace ProductionLtd
 {
@@ -21,23 +19,51 @@ namespace ProductionLtd
     /// </summary>
     public partial class Admin_Site : Window
     {
+        Controller _controller;
         public Admin_Site()
         {
             InitializeComponent();
+            _controller = new Controller();
         }
+
 
         private void LogOut_Click(object sender, RoutedEventArgs e)
         {
-            LoginScreen LS = new LoginScreen();
             this.Close();
-            LS.Visibility = Visibility.Visible;
+        }
+
+
+        private void PrintWorkplan_Click(object sender, RoutedEventArgs e)
+        {
+            //Change site by writing the name of the site you want to go to,- 
+            //and then tell the program that you want to switch, by writting Showdialog.
+            //WorkingPlan WP = new WorkingPlan();
+            //WP.ShowDialog();
+        }
+
+        private void ChangeOrder_Click(object sender, RoutedEventArgs e)
+        {
+            //this.Visibility = Visibility.Hidden;
+            //ChangeOrder AC = new ChangeOrder();
+            //AC.ShowDialog();
+        }
+
+        private void MakeOrder_Click(object sender, RoutedEventArgs e)
+        {
+            //ChangeOrder AC = new ChangeOrder();
+            //AC.ShowDialog();
+        }
+
+        private void RemoveEmployee_Click(object sender, RoutedEventArgs e)
+        {
+            //EmployeeChange AC = new EmployeeChange();
+            //AC.ShowDialog();
         }
 
         private void AddEmployee_Click(object sender, RoutedEventArgs e)
         {
-
-            Controller.addEmployee();
-            
+            //EmployeeChange AC = new EmployeeChange();
+            //AC.ShowDialog();
         }
     }
 }
