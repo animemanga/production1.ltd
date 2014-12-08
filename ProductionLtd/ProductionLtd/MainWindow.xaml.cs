@@ -13,12 +13,16 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace Projekt_Produktion__GUI_ex_
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    /// 
+    
     public partial class MainWindow : Window
     {
         Controller _controller;
@@ -31,6 +35,7 @@ namespace Projekt_Produktion__GUI_ex_
 
             LoginScreen LS = new LoginScreen();
             LS.Show();
+            _controller.SqlLogin();
         }
     }
 }

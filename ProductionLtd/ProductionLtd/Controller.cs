@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace ProductionLtd
 {
@@ -16,10 +18,43 @@ namespace ProductionLtd
 
             // code that add employee from database to the employee class
         }
+        public void SqlLogin()
+        {
+            SqlConnection conn = new SqlConnection(
+                "Server=ealdb1.eal.local;" +
+            "Database=EJL09_DB;" +
+            "User Id=ejl09_usr;" +
+            "Password=Baz1nga9;");
+            try
+            {
+                conn.Open();
 
-        public void addEmployee()
+                SqlCommand cmd = new SqlCommand("GetAddressFromPostalCode", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                SqlDataReader rdr = cmd.ExecuteReader();
+
+                while (rdr.HasRows && rdr.Read())
+                {
+                    Console.WriteLine(rdr["AddressID"] + " " + rdr["AddressLine1"] + rdr["City"] + " " + rdr["PostalCode"]);
+                }
+
+            }
+            catch (SqlException e)
+            {
+                Console.WriteLine("UPS" + e.Message);
+            }
+            finally
+            {
+                conn.Close();
+                conn.Dispose();
+            }
+        }
+
+        public static void addEmployee()
         {
             // add employee to the database with all necesary information to make a add the employee to the employee class next startop
+
         }
         public void removeEmployee()
         {

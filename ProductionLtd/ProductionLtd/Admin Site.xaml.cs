@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace ProductionLtd
 {
@@ -29,6 +31,13 @@ namespace ProductionLtd
             LoginScreen LS = new LoginScreen();
             this.Close();
             LS.Visibility = Visibility.Visible;
+        }
+
+        private void AddEmployee_Click(object sender, RoutedEventArgs e)
+        {
+
+            Controller.addEmployee();
+            
         }
     }
 }
