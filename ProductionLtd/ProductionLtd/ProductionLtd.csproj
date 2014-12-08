@@ -62,8 +62,8 @@
     <Compile Include="ChangeOrder.xaml.cs">
       <DependentUpon>ChangeOrder.xaml</DependentUpon>
     </Compile>
-    <Compile Include="EmployeeChange.xaml.cs">
-      <DependentUpon>EmployeeChange.xaml</DependentUpon>
+    <Compile Include="EmployeeChangeC.xaml.cs">
+      <DependentUpon>EmployeeChangeC.xaml</DependentUpon>
     </Compile>
     <Compile Include="LoginScreen.xaml.cs">
       <DependentUpon>LoginScreen.xaml</DependentUpon>
@@ -84,7 +84,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="EmployeeChange.xaml">
+    <Page Include="EmployeeChangeC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

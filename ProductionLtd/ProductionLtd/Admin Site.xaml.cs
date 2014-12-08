@@ -52,12 +52,14 @@ namespace ProductionLtd
 
         private void MakeOrder_Click(object sender, RoutedEventArgs e)
         {
+            this.Visibility = Visibility.Hidden;
             ChangeOrder AC = new ChangeOrder();
             AC.ShowDialog();
         }
 
         private void RemoveEmployee_Click(object sender, RoutedEventArgs e)
         {
+            this.Visibility = Visibility.Hidden;
             EmployeeChange AC = new EmployeeChange();
             AC.ShowDialog();
         }

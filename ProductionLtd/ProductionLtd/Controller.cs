@@ -18,53 +18,7 @@ namespace ProductionLtd
 
             // code that add employee from database to the employee class
         }
-        public void SqlLogin()
-        {
-            SqlConnection conn = new SqlConnection(
-                "Server=ealdb1.eal.local;" +
-            "Database=EJL09_DB;" +
-            "User Id=ejl09_usr;" +
-            "Password=Baz1nga9;");
-            try
-            {
-
-            }
-            catch (Exception k)
-            {
-                string kk = k.ToString();
-                System.Windows.MessageBox.Show(kk);
-            }
-            finally
-            {
-                conn.Close();
-                conn.Dispose();
-            }
-        }
-
-        public static void addEmployee()
-        {
-            // add employee to the database with all necesary information to make a add the employee to the employee class next startop
-
-        }
-        public void removeEmployee()
-        {
-            // remove the emplyee from the database so it would not come into the employee class again
-        }
-
-
-        public void addOrder()
-        {
-            // code en sølger og admin kan bruge, den tilføjer en order 
-        }
-
-        public void finishOrder()
-        {
-            // code der fjerner en order fra systemmet
-        }
-        public void changeOrder()
-        {
-            //code der går in og redigere i en orders processer
-        }
+        
         public void buildWorkplan()
         {
 

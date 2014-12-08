@@ -24,6 +24,8 @@ namespace ProductionLtd
         string EmployeeType;
         string LaserCutterYN;
         string CNCFræserYN;
+        string RemoveEmployeeID;
+        int i;
 
         public EmployeeChange()
         {
@@ -47,7 +49,7 @@ namespace ProductionLtd
 
                      SqlCommand cmd = new SqlCommand("AddEmployee", conn);
                      cmd.CommandType = CommandType.StoredProcedure;
-
+                     
                      cmd.Parameters.Add(new SqlParameter("@EmployeeTypen", EmployeeType));
                      cmd.Parameters.Add(new SqlParameter("@Name", NameTextBox.Text));
                      cmd.Parameters.Add(new SqlParameter("@LaserCutter", LaserCutterYN));
@@ -106,6 +108,55 @@ namespace ProductionLtd
         private void CNCFræserNobutton_Click(object sender, RoutedEventArgs e)
         {
             CNCFræserYN = "No";
+        }
+
+        private void RemoveEmployeeButton_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                RemoveEmployeeID = RemovedEmployeeNumberTextbox.Text;
+                i = int.Parse(RemoveEmployeeID);
+            }
+            catch (Exception l)
+            {
+                string ll = l.ToString();
+                System.Windows.MessageBox.Show(ll);
+            }
+            {
+                SqlConnection conn = new SqlConnection(
+                    "Server=ealdb1.eal.local;" +
+                "Database=EJL09_DB;" +
+                "User Id=ejl09_usr;" +
+                "Password=Baz1nga9;");
+                try
+                {
+                    conn.Open();
+
+                    SqlCommand cmd = new SqlCommand("RemoveEmployee", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.Add(new SqlParameter("@ID", i));
+
+                    cmd.ExecuteNonQuery();
+                }
+                catch (Exception k)
+                {
+                    string kk = k.ToString();
+                    System.Windows.MessageBox.Show(kk);
+                }
+                finally
+                {
+                    conn.Close();
+                    conn.Dispose();
+                }
+            }
+        }
+
+        private void ReturnButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Visibility = Visibility.Hidden;
+            Admin_Site AS = new Admin_Site();
+            AS.ShowDialog();
         }
 
     }

@@ -38,7 +38,7 @@ namespace ProductionLtd
                 MessageBox.Show("You have to type in the correct username and password", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             else
-                if ((UserName.Text == "Admin") && (PassWord.Text == "1234Admin" ))
+                if ((UserName.Text == "Admin") && (PassWord.Text == "1234Admin") || (UserName.Text == "admin") && (PassWord.Text == "1234admin"))
                 {
                     this.Visibility = Visibility.Hidden;
                     Admin_Site AS = new Admin_Site();

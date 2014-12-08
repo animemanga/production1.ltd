@@ -3,7 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="EmployeeChange" Height="395.706" Width="513.497">
     <Grid>
-        <Button Name ="AddEmployeebutton" Content="Add" HorizontalAlignment="Left" Margin="180,253,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Button Name ="AddEmployeebutton" Content="Add" HorizontalAlignment="Left" Margin="410,164,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="44,10,0,0" TextWrapping="Wrap" Text="Adding employees" VerticalAlignment="Top"/>
 
         <Button Name ="AdminButton" Content="admin" HorizontalAlignment="Left" Margin="124,80,0,0" VerticalAlignment="Top" Width="75" Click="AdminButton_Click"/>
         <Button Name ="SælgerButton" Content="sælger" HorizontalAlignment="Left" Margin="316,80,0,0" VerticalAlignment="Top" Width="75" Click="SælgerButton_Click"/>
@@ -19,6 +20,16 @@
         <TextBlock Name ="LæserCutterTextBlock" HorizontalAlignment="Left" Margin="10,121,0,0" TextWrapping="Wrap" Text="Læsercutter" VerticalAlignment="Top" Height="22" Width="91"/>
         <TextBlock Name ="CNCFærserTextBlock" HorizontalAlignment="Left" Margin="10,157,0,0" TextWrapping="Wrap" Text="CNC Fræser" VerticalAlignment="Top" Height="22" Width="91"/>
         <TextBox Name ="NameTextBox" HorizontalAlignment="Left" Height="23" Margin="124,45,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="11" Margin="0,210,0,0" VerticalAlignment="Top" Width="507"/>
+        
+        <TextBlock HorizontalAlignment="Left" Margin="44,226,0,0" TextWrapping="Wrap" Text="removing employees" VerticalAlignment="Top"/>
+        <TextBox Name ="RemovedEmployeeNumberTextbox" HorizontalAlignment="Left" Height="23" Margin="234,244,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="59"/>
+        <Button Name="RemoveEmployeeButton" Content="Remove" HorizontalAlignment="Left" Margin="410,241,0,0" VerticalAlignment="Top" Width="75" Click="RemoveEmployeeButton_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="44,247,0,0" TextWrapping="Wrap" Text="choose which emploee to remove" VerticalAlignment="Top"/>
+        
+        <Button Name="ReturnButton" Content="Back" HorizontalAlignment="Left" Margin="410,26,0,0" VerticalAlignment="Top" Width="75" Click="ReturnButton_Click"/>
+
 
     </Grid>
 </Window>
