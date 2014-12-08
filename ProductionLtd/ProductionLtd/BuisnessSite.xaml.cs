@@ -32,5 +32,18 @@ namespace ProductionLtd
             this.Close();
             LS.Visibility = Visibility.Visible;
         }
+
+        private void MakeOrder_Click(object sender, RoutedEventArgs e)
+        {
+            //ChangeOrder AC = new ChangeOrder();
+            //AC.ShowDialog();
+        }
+
+        private void ChangeOrder_Click(object sender, RoutedEventArgs e)
+        {
+            //this.Visibility = Visibility.Hidden;
+            //ChangeOrder AC = new ChangeOrder();
+            //AC.ShowDialog();
+        }
     }
 }
