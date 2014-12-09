@@ -54,7 +54,7 @@ namespace ProductionLtd
         private void MakeOrder_Click(object sender, RoutedEventArgs e)
         {
             this.Visibility = Visibility.Hidden;
-            ChangeOrder AC = new ChangeOrder();
+            MakeOrder AC = new MakeOrder();
             AC.ShowDialog();
         }
 

@@ -1,0 +1,24 @@
+﻿<Window x:Class="ProductionLtd.MakeOrder"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MakeOrder" Height="500" Width="700">
+    <Grid>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="450" Margin="10,10,0,0" VerticalAlignment="Top" Width="674"/>
+        <Label Content="Make Order" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="146" FontSize="24"/>
+        <TextBlock HorizontalAlignment="Left" Margin="21,92,0,0" TextWrapping="Wrap" Text="Order:" VerticalAlignment="Top" Height="41" Width="85" FontSize="18"/>
+        <TextBlock HorizontalAlignment="Left" Margin="21,147,0,0" TextWrapping="Wrap" Text="Rist Type:" VerticalAlignment="Top" Height="41" Width="85" FontSize="18"/>
+        <TextBlock HorizontalAlignment="Left" Margin="21,237,0,0" TextWrapping="Wrap" Text="Kunde:" VerticalAlignment="Top" Height="41" Width="85" FontSize="18"/>
+        <TextBlock HorizontalAlignment="Left" Margin="21,303,0,0" TextWrapping="Wrap" Text="Pris:" VerticalAlignment="Top" Height="41" Width="85" FontSize="18"/>
+        <TextBlock HorizontalAlignment="Left" Margin="21,371,0,0" TextWrapping="Wrap" Text="Slut Dato:" VerticalAlignment="Top" Height="41" Width="85" FontSize="18"/>
+        <Button Name="Back" Content="Back" HorizontalAlignment="Left" Margin="568,412,0,0" VerticalAlignment="Top" Width="102" Height="35" Click="Back_Click" />
+        <TextBox Name="OrderBox" HorizontalAlignment="Left" Height="41" Margin="111,92,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="373"/>
+        <TextBox Name="KundeBox" HorizontalAlignment="Left" Height="41" Margin="111,237,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="373"/>
+        <TextBox Name="PrisBox" HorizontalAlignment="Left" Height="41" Margin="111,303,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="373"/>
+        <TextBox Name="SlutDato" HorizontalAlignment="Left" Height="41" Margin="111,371,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="373"/>
+        <Button Name="Type1" Content="Type 1" HorizontalAlignment="Left" Margin="111,147,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Name="Type2" Content="Type 2" HorizontalAlignment="Left" Margin="208,147,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Name="Type3" Content="Type 3" HorizontalAlignment="Left" Margin="305,147,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Name="Kundebestemt" Content="Kundebestemt" HorizontalAlignment="Left" Margin="401,147,0,0" VerticalAlignment="Top" Width="83"/>
+        <TextBox Name="ValgtRist" HorizontalAlignment="Left" Height="23" Margin="111,190,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="75" IsReadOnly="True"/>
+    </Grid>
+</Window>
