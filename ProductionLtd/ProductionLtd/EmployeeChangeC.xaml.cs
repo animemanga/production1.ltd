@@ -26,11 +26,44 @@ namespace ProductionLtd
         string CNCFræserYN;
         string RemoveEmployeeID;
         int i;
+        string EmployeeList;
 
         public EmployeeChange()
         {
             InitializeComponent();
-            
+
+            for (int i = 0; i < 100; i++)
+            {
+                {
+                    SqlConnection conn = new SqlConnection(
+                        "Server=ealdb1.eal.local;" +
+                    "Database=EJL09_DB;" +
+                    "User Id=ejl09_usr;" +
+                    "Password=Baz1nga9;");
+                    try
+                    {
+                        conn.Open();
+                        SqlCommand cmd = new SqlCommand("PrintAllEmployees", conn);
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.Add(new SqlParameter("ID", i));
+                        SqlDataReader rdr = cmd.ExecuteReader();
+                        while (rdr.HasRows && rdr.Read())
+                        {
+                            EmployeeListeTextBlock.Text += rdr["ID"].ToString() + ": " + rdr["Name"].ToString() + ", " + rdr["EmployeeType"].ToString() + "\n";
+                        }
+                    }
+                    catch (Exception k)
+                    {
+                        string kk = k.ToString();
+                        System.Windows.MessageBox.Show(kk);
+                    }
+                    finally
+                    {
+                        conn.Close();
+                        conn.Dispose();
+                    }
+                }
+            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
