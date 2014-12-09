@@ -29,7 +29,13 @@ namespace ProductionLtd
         public EmployeeChange()
         {
             InitializeComponent();
+            refreshDisplayData();
 
+        }
+
+        public void refreshDisplayData()
+        {
+            EmployeeListeTextBlock.Text = "";
             for (int i = 0; i < 100; i++)
             {
                 {
@@ -63,6 +69,7 @@ namespace ProductionLtd
                 }
             }
         }
+        
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -76,7 +83,6 @@ namespace ProductionLtd
                  try
                  {
                      conn.Open();
-
 
                      SqlCommand cmd = new SqlCommand("AddEmployee", conn);
                      cmd.CommandType = CommandType.StoredProcedure;
@@ -99,6 +105,7 @@ namespace ProductionLtd
                      conn.Dispose();
                  }
             }
+             refreshDisplayData();
         }
 
         private void AdminButton_Click(object sender, RoutedEventArgs e)
@@ -181,6 +188,7 @@ namespace ProductionLtd
                     conn.Dispose();
                 }
             }
+            refreshDisplayData();
         }
 
         private void ReturnButton_Click(object sender, RoutedEventArgs e)
