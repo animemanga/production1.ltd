@@ -68,6 +68,17 @@ namespace ProductionLtd
         {
             try { LoginAdmin(); }
             catch (Exception) { }
+
         }
+
+            private void PasswordKeyDown(object sender, KeyEventArgs e)
+    {
+       if (e.Key == Key.Enter)
+       {
+         //Whatever code you want if enter key is pressed goes here
+           try { LoginAdmin(); }
+           catch (Exception) { }
+       }
+    }
     }
 }

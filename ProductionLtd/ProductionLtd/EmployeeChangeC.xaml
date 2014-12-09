@@ -6,10 +6,10 @@
         <Button Name ="AddEmployeebutton" Content="Add" HorizontalAlignment="Left" Margin="410,164,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
         <TextBlock HorizontalAlignment="Left" Margin="44,10,0,0" TextWrapping="Wrap" Text="Adding employees" VerticalAlignment="Top"/>
 
-        <Button Name ="AdminButton" Content="admin" HorizontalAlignment="Left" Margin="124,80,0,0" VerticalAlignment="Top" Width="75" Click="AdminButton_Click"/>
-        <Button Name ="SælgerButton" Content="sælger" HorizontalAlignment="Left" Margin="316,80,0,0" VerticalAlignment="Top" Width="75" Click="SælgerButton_Click"/>
+        <Button Name ="AdminButton" Content="Admin" HorizontalAlignment="Left" Margin="124,80,0,0" VerticalAlignment="Top" Width="75" Click="AdminButton_Click"/>
+        <Button Name ="SælgerButton" Content="Sælger" HorizontalAlignment="Left" Margin="316,80,0,0" VerticalAlignment="Top" Width="75" Click="SælgerButton_Click"/>
         <Button Name ="ProduktionsarbejderButton" Content="Produktion" HorizontalAlignment="Left" Margin="218,80,0,0" VerticalAlignment="Top" Width="75" Click="ProduktionsarbejderButton_Click"/>
-        <Button Name ="AndetButton" Content="andet" HorizontalAlignment="Left" Margin="410,80,0,0" VerticalAlignment="Top" Width="75" Click="AndetButton_Click"/>
+        <Button Name ="AndetButton" Content="Andet" HorizontalAlignment="Left" Margin="410,80,0,0" VerticalAlignment="Top" Width="75" Click="AndetButton_Click"/>
         <Button Name ="LaserCutterYesbutton" Content="Yes" HorizontalAlignment="Left" Margin="124,121,0,0" VerticalAlignment="Top" Width="75" Click="LaserCutterYesbutton_Click"/>
         <Button Name ="LaserCutterNobutton" Content="No" HorizontalAlignment="Left" Margin="218,122,0,0" VerticalAlignment="Top" Width="75" Click="LaserCutterNobutton_Click"/>
         <Button Name ="CNCFræserYesbutton" Content="Yes" HorizontalAlignment="Left" Margin="124,155,0,0" VerticalAlignment="Top" Width="75" Click="CNCFræserYesbutton_Click"/>

@@ -39,6 +39,7 @@ namespace ProductionLtd
         {
             //Change site by writing the name of the site you want to go to,- 
             //and then tell the program that you want to switch, by writting Showdialog.
+            this.Visibility = Visibility.Hidden;
             Workingplan Wp = new Workingplan();
             Wp.ShowDialog();
         }
@@ -66,6 +67,7 @@ namespace ProductionLtd
 
         private void AddEmployee_Click(object sender, RoutedEventArgs e)
         {
+            this.Visibility = Visibility.Hidden;
             EmployeeChange AC = new EmployeeChange();
             AC.ShowDialog();
         }

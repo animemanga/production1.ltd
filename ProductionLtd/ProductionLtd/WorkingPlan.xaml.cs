@@ -23,5 +23,12 @@ namespace ProductionLtd
         {
             InitializeComponent();            
         }
+
+        private void Back_Click(object sender, RoutedEventArgs e)
+        {
+            this.Visibility = Visibility.Hidden;
+            Admin_Site AS = new Admin_Site();
+            AS.ShowDialog();
+        }
     }
 }
