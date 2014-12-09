@@ -45,14 +45,14 @@ namespace ProductionLtd
                     AS.ShowDialog();
                 }
                 else
-                    if ((UserName.Text == "Buisness") && (PassWord.Text == "1234Buisness"))
+                    if ((UserName.Text == "Buisness") && (PassWord.Text == "1234Buisness") || (UserName.Text == "buisness") && (PassWord.Text == "1234buisness"))
                     {
                         this.Visibility = Visibility.Hidden;
                         BuisnessSite BS = new BuisnessSite();
                         BS.ShowDialog();
                     }
                     else
-                        if ((UserName.Text == "Employee") && (PassWord.Text == "1234Employee"))
+                        if ((UserName.Text == "Employee") && (PassWord.Text == "1234Employee") || (UserName.Text == "employee") && (PassWord.Text == "1234employee"))
                         {
                             this.Visibility = Visibility.Hidden;
                             Workingplan WP = new Workingplan();

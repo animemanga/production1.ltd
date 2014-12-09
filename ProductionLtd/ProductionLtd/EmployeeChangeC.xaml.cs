@@ -26,8 +26,6 @@ namespace ProductionLtd
         string CNCFræserYN;
         string RemoveEmployeeID;
         int i;
-        string EmployeeList;
-
         public EmployeeChange()
         {
             InitializeComponent();
