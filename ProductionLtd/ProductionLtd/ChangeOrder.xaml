@@ -1,8 +1,14 @@
 ﻿<Window x:Class="ProductionLtd.ChangeOrder"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="ChangeOrder" Height="300" Width="300">
+        Title="ChangeOrder" Height="371.045" Width="1016.418">
     <Grid>
-        
+        <TextBlock HorizontalAlignment="Left" Margin="29,10,0,0" TextWrapping="Wrap" Text="Edit Orders" VerticalAlignment="Top" Height="24" Width="151"/>
+        <TextBlock Name="OrderListePrintTextBox" HorizontalAlignment="Left" Margin="283,25,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="32" Width="727"/>
+        <TextBox Name="OrderTooEditTextBox" HorizontalAlignment="Left" Height="22" Margin="53,65,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="125"/>
+        <Button Name="EditOrderButton" Content="Edit" HorizontalAlignment="Left" Margin="178,65,0,0" VerticalAlignment="Top" Width="75"/>
+
+
+
     </Grid>
 </Window>
