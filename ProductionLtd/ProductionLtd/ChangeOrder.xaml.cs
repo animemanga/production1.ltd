@@ -21,6 +21,9 @@ namespace ProductionLtd
     /// </summary>
     public partial class ChangeOrder : Window
     {
+        string RemoveOrderID;
+        int i;
+
         public ChangeOrder()
         {
             InitializeComponent();
@@ -28,39 +31,77 @@ namespace ProductionLtd
         }
 
         private void refreshDisplayData()
-        {
-            for (int i = 0; i < 10; i++)
+        {                
+            SqlConnection conn = new SqlConnection(
+                "Server=ealdb1.eal.local;" +
+                "Database=EJL09_DB;" +
+                "User Id=ejl09_usr;" +
+                "Password=Baz1nga9;");                
+            try
             {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("PrintAllOrders", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlDataReader rdr = cmd.ExecuteReader();
+                while (rdr.HasRows && rdr.Read())
                 {
-                    SqlConnection conn = new SqlConnection(
-                        "Server=ealdb1.eal.local;" +
-                    "Database=EJL09_DB;" +
-                    "User Id=ejl09_usr;" +
-                    "Password=Baz1nga9;");
-                    try
-                    {
-                        conn.Open();
-                        SqlCommand cmd = new SqlCommand("PrintAllOrders", conn);
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.Add(new SqlParameter("ID", i));
-                        SqlDataReader rdr = cmd.ExecuteReader();
-                        while (rdr.HasRows && rdr.Read())
-                        {
-                            OrderListePrintTextBox.Text += rdr["ID"].ToString() + ": " + rdr["Name"].ToString() + ", " + rdr["DeadLine"].ToString() + rdr["Pris"].ToString() + ", " + rdr["RistType"].ToString() + ", " + rdr["Antal"].ToString() + ", " + "\n";
-                        }
-                    }
-                    catch (Exception k)
-                    {
-                        string kk = k.ToString();
-                        System.Windows.MessageBox.Show(kk);
-                    }
-                    finally
-                    {
-                        conn.Close();
-                        conn.Dispose();
-                    }
+                    OrderListePrintTextBox.Text += rdr["ID"].ToString() + ": " + rdr["Name"].ToString() + ", " + rdr["DeadLine"].ToString().Substring(0, 10) + ", " + rdr["Pris"].ToString() + ", " + rdr["RistType"].ToString() + ", " + rdr["Antal"].ToString() + "\n";
                 }
             }
+            catch (Exception k)
+            {
+                string kk = k.ToString();
+                System.Windows.MessageBox.Show(kk);
+            }
+            finally
+            {
+                conn.Close();
+                conn.Dispose();
+            }
+        }
+
+        private void RemoveOrderButton_Click(object sender, RoutedEventArgs e)
+        {
+            OrderListePrintTextBox.Text = "";
+            try
+            {
+                RemoveOrderID = RemoveOrderTextBox.Text;
+                i = int.Parse(RemoveOrderID);
+            }
+            catch (Exception l)
+            {
+                string ll = l.ToString();
+                System.Windows.MessageBox.Show(ll);
+            }
+            {
+                SqlConnection conn = new SqlConnection(
+                    "Server=ealdb1.eal.local;" +
+                "Database=EJL09_DB;" +
+                "User Id=ejl09_usr;" +
+                "Password=Baz1nga9;");
+                try
+                {
+                    conn.Open();
+
+                    SqlCommand cmd = new SqlCommand("RemoveOrders", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.Add(new SqlParameter("@ID", i));
+
+                    cmd.ExecuteNonQuery();
+                }
+                catch (Exception k)
+                {
+                    string kk = k.ToString();
+                    System.Windows.MessageBox.Show(kk);
+                }
+                finally
+                {
+                    conn.Close();
+                    conn.Dispose();
+                }
+            }
+            refreshDisplayData();
         }
     }
 }

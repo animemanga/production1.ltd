@@ -34,6 +34,7 @@ namespace Projekt_Produktion__GUI_ex_
             this.Visibility = Visibility.Hidden;
 
             LoginScreen LS = new LoginScreen();
-            LS.Show();        }
+            LS.Show();
+        }
     }
 }
