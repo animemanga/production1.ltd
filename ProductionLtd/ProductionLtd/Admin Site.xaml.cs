@@ -19,11 +19,10 @@ namespace ProductionLtd
     /// </summary>
     public partial class Admin_Site : Window
     {
-        Controller _controller;
+        
         public Admin_Site()
         {
             InitializeComponent();
-            _controller = new Controller();
         }
 
 
@@ -37,6 +36,10 @@ namespace ProductionLtd
 
         private void PrintWorkplan_Click(object sender, RoutedEventArgs e)
         {
+            Controller.HandleWorkplan();
+
+
+
             //Change site by writing the name of the site you want to go to,- 
             //and then tell the program that you want to switch, by writting Showdialog.
             this.Visibility = Visibility.Hidden;

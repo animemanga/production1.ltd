@@ -21,9 +21,12 @@ namespace ProductionLtd
     /// </summary>
     public partial class LoginScreen : Window
     {
+        Controller _controller;
+
         public LoginScreen()
         {
             InitializeComponent();
+            _controller = new Controller();
         }
 
         private void Cancel_Click(object sender, RoutedEventArgs e)

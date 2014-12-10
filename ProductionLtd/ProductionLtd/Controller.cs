@@ -10,16 +10,21 @@ namespace ProductionLtd
 {
     class Controller
     {
-        List<Employee> _employeeliste;
-
+        static List<Employee> employeeListe;
         public Controller()
         {
-            _employeeliste = new List<Employee>();
+            employeeListe = new List<Employee>();
 
             // code that add employee from database to the employee class
         }
-        
-        public void buildWorkplan()
+        public static void HandleWorkplan()
+        {
+            GetEmployeesfromDatabase();
+            GetordersfromDatabase();
+
+            buildWorkplan();
+        }
+        public static void buildWorkplan()
         {
 
             /*
@@ -32,22 +37,87 @@ namespace ProductionLtd
              * 
             */
         }
-        public void printWorkplan()
+        public static void GetordersfromDatabase()
         {
-            /*
-             * for alle produktion medarbejdere
-             * employeeliste -> workplan
-             * print navn
-             * print maskine, arbejdstid, order
-            */
-            for (int i = 0; i < _employeeliste.Count; i++)
-            {
-                /* systemTingDerPrintNytVindue*/
-                string antifejlting1 = _employeeliste[i].name;
-                string antifejlting2 = _employeeliste[i]._workplan[i].order;
-                string antifejlting3 = _employeeliste[i]._workplan[i].maskine;
-                int antifejlting4 = _employeeliste[i]._workplan[i].tid;
 
+            SqlConnection conn = new SqlConnection(
+                "Server=ealdb1.eal.local;" +
+                "Database=EJL09_DB;" +
+                "User Id=ejl09_usr;" +
+                "Password=Baz1nga9;");
+
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("PrintAllOrders", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlDataReader rdr = cmd.ExecuteReader();
+                while (rdr.HasRows && rdr.Read())
+                {
+                    string ID = rdr["ID"].ToString();
+                    string Name = rdr["Name"].ToString();
+                    string DeadLine = rdr["DeadLine"].ToString();
+                    string Pris = rdr["Pris"].ToString();
+                    string Risttype = rdr["RistType"].ToString();
+                    string Antal = rdr["Antal"].ToString();
+                    Order Order = new Order(int.Parse(ID), Name, DeadLine, int.Parse(Pris), Risttype, Antal);
+                }
+            }
+            catch (Exception k)
+            {
+                string kk = k.ToString();
+                System.Windows.MessageBox.Show(kk);
+            }
+            finally
+            {
+                conn.Close();
+                conn.Dispose();
+            }
+        }
+
+
+
+        public static void GetEmployeesfromDatabase()
+        {
+            
+            SqlConnection conn = new SqlConnection(
+                "Server=ealdb1.eal.local;" +
+                "Database=EJL09_DB;" +
+                "User Id=ejl09_usr;" +
+                "Password=Baz1nga9;");
+
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("PrintAllEmployees", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlDataReader rdr = cmd.ExecuteReader();
+                while (rdr.HasRows && rdr.Read())
+                {
+                    string ID = rdr["ID"].ToString();
+                    string Name = rdr["Name"].ToString();
+                    string EmployeeType = rdr["EmployeeType"].ToString();
+                    string LaserCutter = rdr["LaserCutter"].ToString();
+                    string CNCFræser = rdr["CNCFræser"].ToString();
+
+                    Employee employee = new Employee(int.Parse(ID), Name , EmployeeType, LaserCutter, CNCFræser);
+                    employeeListe.Add(employee);
+                    
+                }
+                //for (int i = 0; i < employeeListe.Count; i++)
+                //{
+                //    System.Windows.MessageBox.Show(employeeListe[i].Name);
+                //}
+            }
+            catch (Exception k)
+            {
+                string kk = k.ToString();
+                System.Windows.MessageBox.Show(kk);
+            }
+            finally
+            {
+                conn.Close();
+                conn.Dispose();
             }
         }
     }

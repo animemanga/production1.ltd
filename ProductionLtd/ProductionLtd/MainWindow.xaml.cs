@@ -25,11 +25,9 @@ namespace Projekt_Produktion__GUI_ex_
     
     public partial class MainWindow : Window
     {
-        Controller _controller;
         public MainWindow()
         {
             InitializeComponent();
-            _controller = new Controller();
 
             this.Visibility = Visibility.Hidden;
 

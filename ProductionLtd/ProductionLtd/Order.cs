@@ -11,20 +11,22 @@ namespace ProductionLtd
 {
     class Order
     {
-        
-        public DateTime deadLine { get; set; }
-        public string name { get; set; }
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public string DeadLine { get; set; }
+        public int Pris { get; set; }
+        public string RistType { get; set; }
+        public string Antal { get; set; } 
 
-        public Order(bool comstom)
+
+        public Order(int ID, string Name,string DeadLine,int pris, string RistType, string Antal)
         {
-            if (comstom == false)
-            {
-                // code der spørger efter type 1, 2 eller 3
-            }
-            else
-            {
-                // code der opretter en liste af Process med sepcial valgte input 
-            }
+            this.ID = ID;
+            this.Name = Name;
+            this.DeadLine = DeadLine;
+            this.Pris = pris;
+            this.RistType = RistType;
+            this.Antal = Antal;
         }
     }
 }

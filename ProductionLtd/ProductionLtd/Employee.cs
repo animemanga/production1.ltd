@@ -11,17 +11,20 @@ namespace ProductionLtd
 
     class Employee
     {
-        public List<Workplan> _workplan = new List<Workplan>();
-        public string employeeType { get; set; } // sælger, service eller produktionmedarbejder 
-        public string name { get; set; }
         public int ID { get; set; }
+        public string Name { get; set; }
+        public string employeeType { get; set; } // sælger, service eller produktionmedarbejder 
         public string LaserCutter { get; set; } // yes or no
         public string CNCFræser { get; set; } // yes or no
 
 
-        public Employee()
+        public Employee(int ID, string Name, string employeeType, string LaserCutter, string CNCFræser)
         {
-           
+            this.ID = ID;
+            this.Name = Name;
+            this.employeeType = employeeType;
+            this.LaserCutter = LaserCutter;
+            this.CNCFræser = CNCFræser;
         }
     }
 
