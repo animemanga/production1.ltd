@@ -28,9 +28,10 @@ namespace ProductionLtd
 
         private void Back_Click(object sender, RoutedEventArgs e)
         {
-            this.Visibility = Visibility.Hidden;
-            Admin_Site AS = new Admin_Site();
-            AS.ShowDialog();
+            //this.Visibility = Visibility.Hidden;
+            //Admin_Site AS = new Admin_Site();
+            //AS.ShowDialog();
+            this.Close();
         }
 
         private void AddOrderButtom_Click(object sender, RoutedEventArgs e)

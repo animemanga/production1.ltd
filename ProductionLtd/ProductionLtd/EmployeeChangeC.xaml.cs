@@ -125,21 +125,29 @@ namespace ProductionLtd
         private void LaserCutterYesbutton_Click(object sender, RoutedEventArgs e)
         {
             LaserCutterYN = "Yes";
+            LaserCutterYesbutton.Background = Brushes.HotPink;
+            LaserCutterNobutton.Background = Brushes.LightGray;
         }
 
         private void LaserCutterNobutton_Click(object sender, RoutedEventArgs e)
         {
             LaserCutterYN = "No";
+            LaserCutterNobutton.Background = Brushes.HotPink;
+            LaserCutterYesbutton.Background = Brushes.LightGray;
         }
 
         private void CNCFræserYesbutton_Click(object sender, RoutedEventArgs e)
         {
             CNCFræserYN = "Yes";
+            CNCFræserYesbutton.Background = Brushes.HotPink;
+            CNCFræserNobutton.Background = Brushes.LightGray;
         }
 
         private void CNCFræserNobutton_Click(object sender, RoutedEventArgs e)
         {
             CNCFræserYN = "No";
+            CNCFræserNobutton.Background = Brushes.HotPink;
+            CNCFræserYesbutton.Background = Brushes.LightGray;
         }
 
         private void RemoveEmployeeButton_Click(object sender, RoutedEventArgs e)
