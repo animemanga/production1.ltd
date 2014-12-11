@@ -8,7 +8,7 @@
         <Button Name="ChangeOrder" Content="Change Order" HorizontalAlignment="Left" VerticalAlignment="Top" Width="282" Margin="29,81,0,0" Height="30" Click="ChangeOrder_Click"/>
         <Button Name="Deadline" Content="Deadline" HorizontalAlignment="Left" VerticalAlignment="Top" Width="282" Margin="29,142,0,0" Height="29"/>
         <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="1" Stroke="Black" VerticalAlignment="Top" Width="282" Margin="29,127,0,0"/>
-        <Label Content="Buisness" HorizontalAlignment="Left" Margin="145,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="Business" HorizontalAlignment="Left" Margin="145,10,0,0" VerticalAlignment="Top"/>
         <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="1" Stroke="Black" VerticalAlignment="Top" Width="282" Margin="29,188,0,0"/>
         <Button Name="LogOut" Content="LogOut" HorizontalAlignment="Left" Margin="29,205,0,0" VerticalAlignment="Top" Width="282" Height="28" Click="LogOut_Click" />
     </Grid>
