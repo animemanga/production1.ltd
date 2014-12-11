@@ -33,6 +33,7 @@ namespace Projekt_Produktion__GUI_ex_
 
             LoginScreen LS = new LoginScreen();
             LS.Show();
+            this.Close();
         }
     }
 }
