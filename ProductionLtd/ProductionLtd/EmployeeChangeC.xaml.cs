@@ -198,6 +198,7 @@ namespace ProductionLtd
             this.Visibility = Visibility.Hidden;
             Admin_Site AS = new Admin_Site();
             AS.ShowDialog();
+            this.Close();
         }
 
     }

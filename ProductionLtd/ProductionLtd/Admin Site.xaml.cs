@@ -45,13 +45,15 @@ namespace ProductionLtd
             this.Visibility = Visibility.Hidden;
             Workingplan Wp = new Workingplan();
             Wp.ShowDialog();
+            this.Visibility = Visibility.Visible;
         }
 
         private void ChangeOrder_Click(object sender, RoutedEventArgs e)
         {
-            //this.Visibility = Visibility.Hidden;
+            this.Visibility = Visibility.Hidden;
             ChangeOrder AC = new ChangeOrder();
             AC.ShowDialog();
+            this.Visibility = Visibility.Collapsed;
         }
 
         private void MakeOrder_Click(object sender, RoutedEventArgs e)
@@ -65,7 +67,7 @@ namespace ProductionLtd
         {
             this.Visibility = Visibility.Hidden;
             EmployeeChange AC = new EmployeeChange();
-            AC.ShowDialog();
+            AC.ShowDialog(); 
         }
 
         private void AddEmployee_Click(object sender, RoutedEventArgs e)

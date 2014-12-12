@@ -48,7 +48,7 @@ namespace ProductionLtd
                     AS.ShowDialog();
                 }
                 else
-                    if ((UserName.Text == "Business") && (PassWord.Text == "1234Business") || (UserName.Text == "business") && (PassWord.Text == "1234bsisness"))
+                    if ((UserName.Text == "Business") && (PassWord.Text == "1234Business") || (UserName.Text == "business") && (PassWord.Text == "1234busisness"))
                     {
                         this.Visibility = Visibility.Hidden;
                         BuisnessSite BS = new BuisnessSite();
